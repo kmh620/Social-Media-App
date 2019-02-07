@@ -7,7 +7,7 @@ import { AuthenticationService } from './authentication/authentication.service';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  providers: [ AuthenticationService ]
+  providers: [AuthenticationService]
 })
 export class AppComponent {
   title = 'Social Media';
@@ -17,19 +17,18 @@ export class AppComponent {
 
   constructor(public authService: AuthenticationService,
     private router: Router,
-  )
-    {
-      this.authService.user.subscribe(user => {
-        if (user == null) {
-          this.isLoggedIn = false;
-          this.router.navigate(['']);
-        } else {
-          this.isLoggedIn = true;
-          this.userName = user.displayName;
-          this.router.navigate(['app-private']);
-        }
-      });
-    }
+  ) {
+    this.authService.user.subscribe(user => {
+      if (user == null) {
+        this.isLoggedIn = false;
+        this.router.navigate(['']);
+      } else {
+        this.isLoggedIn = true;
+        this.userName = user.displayName;
+        this.router.navigate(['app-private']);
+      }
+    });
+  }
 
   login() {
     this.authService.login();
@@ -38,14 +37,4 @@ export class AppComponent {
   logout() {
     this.authService.logout();
   }
-
-  // myFunction() {
-  //   var x = document.getElementById("myTopnav");
-  //   if (x.className === "topnav") {
-  //     x.className += " responsive";
-  //   } else {
-  //     x.className = "topnav";
-  //   }
-  // }
-
 }
