@@ -201,15 +201,6 @@ input,
   color: white;
 }
 
-.fb {
-  background-color: #3B5998;
-  color: white;
-}
-
-.twitter {
-  background-color: #55ACEE;
-  color: white;
-}
 
 input[type=submit] {
   background-color: #4CAF50;
