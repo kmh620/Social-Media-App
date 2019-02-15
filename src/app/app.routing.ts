@@ -1,8 +1,6 @@
-// angular main import
 import { ModuleWithProviders }  from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-// component page routing import
 import { PrivateComponent } from './private/private.component';
 import { ProfileComponent } from './profile/profile.component';
 import { LogInComponent } from './log-in/log-in.component';

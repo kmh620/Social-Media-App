@@ -18,8 +18,6 @@
   * Add comment functionality to posts
   * Ability to create new users
   * Add multiple login options
-  * Add game/ user points system and functionality
-
 
 ## __Setup/Installation Requirements__
 
